@@ -445,6 +445,7 @@ body {
 }
 
 .night-day .header__btn {
+  background-color: #fff;
   color: #22343D;
 }
 
@@ -575,10 +576,24 @@ a {
 }
 
 .header__logo {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 28px;
+  color: #22343D;
 }
 
-.header__logo:active {
+.header__logo-img {
+  display: block;
+  margin-right: 16px;
+}
+
+.header__logo-img:active {
   opacity: 0.7;
 }
 
@@ -726,6 +741,7 @@ a {
   font-weight: 600;
   line-height: 24px;
   color: #173A56;
+  background-color: #fff;
   border: 1px solid #BCD0E5;
   border-radius: 4px;
   padding: 9px 23px;
@@ -1003,6 +1019,9 @@ a {
   .intro__title {
     width: 100%;
     font-size: 36px;
+  }
+  .intro__link {
+    margin-left: 20px;
   }
 }
 

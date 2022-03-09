@@ -1,0 +1,236 @@
+@keyframes nav-open {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+@keyframes nav-close {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 5;
+
+}
+.header__container {
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+}
+.header__logo {
+  display: block;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+.header__burger {
+  display: none;
+  cursor: pointer;
+  width: 21px;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+.header__burger-inner,
+.header__burger::before,
+.header__burger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: $grey;
+    transition: .2s ease transform;
+}
+.header__burger::after {
+  margin-bottom: 0;
+}
+.header__burger--opened .header__burger-inner {
+  display: none;
+}
+.header__burger--opened::after,
+.header__burger--opened::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__burger--opened::after {
+  transform: rotate(45deg);
+}
+.header__burger--opened::before {
+  margin-bottom: 0;
+  transform: rotate(-45deg);
+}
+.header__nav {
+  @include flex;
+  align-items: center
+}
+.header__list {
+  @include flex;
+  align-items: baseline;
+  @include reset-list;
+  margin-right: 24px;
+}
+.header__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.header__content {
+  @include flex;
+  align-items: center;
+}
+.header__content-btn {
+  @include flex;
+  align-items: center;
+}
+.header__link {
+  font-weight: 600;
+  line-height: 28px;
+  color: $grey;
+  opacity: 0.7;
+  transition: .2s ease all;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.header__btn-user {
+  display: none;
+  @include btn;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background: $accent-color url("../img/user.svg") no-repeat center;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+.header__btn {
+  @include btn;
+  flex-shrink: 0;
+  font-weight: 600;
+  line-height: 24px;
+  color: #173A56;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+  padding: 9px 23px;
+  margin-right: 24px;
+  transition: .3s ease all;
+
+  &:hover {
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    color: $white;
+  }
+}
+.header__btn-toggle {
+  @include btn;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background: #F3F3F3 url("../img/day-night.svg") no-repeat center;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+@media only screen and (max-width: $tablet) {
+  .header__nav {
+    margin-right: 20px;
+  }
+  .header__item {
+    margin-right: 25px;
+  }
+  .header__content {
+    position: relative;
+  }
+  .header__content-btn {
+    display: none;
+    width: 236px;
+    border-radius: 4px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+  .header__btn--opened {
+    display: flex;
+  }
+  .header__btn-user {
+    display: block;
+    margin-right: 20px;
+  }
+  .header__btn--up {
+    margin-right: 0;
+  }
+  .header__btn {
+    background-color: #fff;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .header__container {
+    justify-content: space-between;
+  }
+  .header__burger {
+    display: block;
+  }
+  .header__nav--opened {
+    display: flex;
+    animation: nav-open .3s linear;
+  }
+  .header__nav--closing {
+    animation: nav-close .3s linear;
+  }
+  .header__nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $grey;
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    width: 256px;
+    height: calc(100vh - 66px);
+    padding-top: 64px;
+    padding-left: 32px;
+  }
+  .header__nav--opened {
+    display: flex;
+    animation: nav-open .3s linear;
+  }
+  .header__nav--closing {
+    animation: nav-close .3s linear;
+  }
+  .header__list {
+    flex-direction: column;
+    margin-right: 0;
+  }
+  .header__item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .header__link {
+    color: $white;
+  }
+}

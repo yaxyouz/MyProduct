@@ -1,0 +1,86 @@
+.special {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(179.59deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
+    transform: rotate(180deg);
+    z-index: -1;
+    border-top-right-radius: 50% 150px;
+    border-top-left-radius: 50% 150px;
+  }
+}
+.special__container {
+  text-align: center;
+  padding-bottom: 90px;
+  position: relative;
+}
+.special__title {
+  display: inline-block;
+  width: 520px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #22343D;
+  margin: 0;
+}
+.special__list {
+  @include reset-list;
+  @include flex;
+  justify-content: center;
+  padding-top: 58px;
+  padding-bottom: 64px;
+  margin-bottom: -30px;
+}
+.special__item {
+  width: 240px;
+  text-align: left;
+  margin-right: 46px;
+  margin-bottom: 30px;
+
+  &:nth-child(4n),
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+  }
+}
+.special__item--click::before {
+  background: $accent-color url("../img/click.svg") no-repeat center;
+}
+.special__item--surveys::before {
+  background: $blue url("../img/surveys.svg") no-repeat center;
+}
+.special__item--preference::before {
+  background: $purple url("../img/preference.svg") no-repeat center;
+}
+.special__item--second::before {
+  background: $red url("../img/second.svg") no-repeat center;
+}
+.special__item-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  color: $grey;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 13px;
+}
+.special__item-descreption {
+  line-height: 26px;
+  color: #22343D;
+  margin: 0;
+  opacity: 0.7;
+}

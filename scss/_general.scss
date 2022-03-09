@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.freez {
+  overflow: hidden;
+}
+.night-day {
+  background-color: $grey;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+  p {
+    color: #fff;
+  }
+  h3 {
+    color: #fff;
+  }
+  .special::after {
+    opacity: 0.1;
+  }
+  button {
+    color: #fff;
+  }
+  .header {
+    background-color: $grey;
+
+    &__burger {
+      background-color: $grey;
+    }
+
+    &__burger-inner,
+    &__burger::before,
+    &__burger::after {
+      background-color: #fff;
+    }
+  }
+}
+main {
+  flex-grow: 1;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

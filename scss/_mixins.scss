@@ -1,0 +1,27 @@
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin btn {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+@mixin inter {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+@mixin montserrat {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}

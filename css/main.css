@@ -421,10 +421,18 @@ body {
 
 .night-day {
   background-color: #22343D;
-  color: #fff !important;
+  color: #fff;
 }
 
 .night-day a {
+  color: #fff;
+}
+
+.night-day p {
+  color: #fff;
+}
+
+.night-day h3 {
   color: #fff;
 }
 
@@ -437,7 +445,7 @@ body {
 }
 
 .night-day .header__btn {
-  color: #22343D;
+  color: #fff;
 }
 
 .night-day .header {

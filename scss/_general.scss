@@ -21,8 +21,14 @@ body {
 }
 .night-day {
   background-color: $grey;
-  color: $white !important;
+  color: $white;
   a {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+  h3 {
     color: $white;
   }
   .special::after {
@@ -32,7 +38,7 @@ body {
     color: $white;
   }
   .header__btn {
-    color: $grey;
+    color: $white;
   }
   .header {
     background-color: $grey;
@@ -44,7 +50,7 @@ body {
     &__burger-inner,
     &__burger::before,
     &__burger::after {
-      background-color: #fff;
+      background-color: $white;
     }
   }
 }

@@ -421,18 +421,10 @@ body {
 
 .night-day {
   background-color: #22343D;
-  color: #fff;
+  color: #fff !important;
 }
 
 .night-day a {
-  color: #fff;
-}
-
-.night-day p {
-  color: #fff;
-}
-
-.night-day h3 {
   color: #fff;
 }
 
@@ -442,6 +434,10 @@ body {
 
 .night-day button {
   color: #fff;
+}
+
+.night-day .header__btn {
+  color: #22343D;
 }
 
 .night-day .header {
@@ -824,7 +820,7 @@ a {
     right: 0;
     width: 256px;
     height: calc(100vh - 66px);
-    padding-top: 64px;
+    padding-top: 40px;
     padding-left: 32px;
   }
   .header__nav--opened {
@@ -844,6 +840,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-right: 0;
+    margin-bottom: 15px;
   }
   .header__item {
     margin-right: 0;
@@ -854,6 +851,21 @@ a {
   }
   .header__link {
     color: #fff;
+  }
+  .header__btn-user {
+    display: none;
+  }
+  .header__content-btn {
+    width: auto;
+    display: block;
+    position: static;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header__btn {
+    display: block;
+    margin-right: 0;
+    margin: 0 auto 15px;
   }
 }
 
@@ -874,17 +886,24 @@ a {
   background-color: #02897A;
 }
 
+@media only screen and (max-width: 729px) {
+  .get-link {
+    padding: 15px 24px;
+  }
+}
+
 .intro__container {
   margin-top: 80px;
   padding: 145px 20px 219px;
   position: relative;
 }
 
-.intro__container::after {
+.intro__container::before {
   content: "";
   display: block;
   width: 600px;
   height: 556px;
+  margin: 0 auto;
   background: url("../img/intro-img.svg") no-repeat center;
   position: absolute;
   right: 0;
@@ -944,6 +963,38 @@ a {
 @media only screen and (max-width: 1150px) {
   .intro__container {
     margin-top: 68px;
+    padding: 60px 20px 160px;
+    text-align: center;
+  }
+  .intro__container::before {
+    position: static;
+  }
+  .intro__content {
+    display: inline-block;
+    padding-top: 30px;
+  }
+  .intro__title {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 729px) {
+  .intro__container {
+    margin-top: 66px;
+    padding: 30px 20px 116px;
+    text-align: center;
+  }
+  .intro__container::before {
+    width: 338px;
+    height: 311px;
+    background: url("../img/intro-img-mobile.svg") no-repeat center;
+  }
+  .intro__content {
+    width: 100%;
+  }
+  .intro__title {
+    width: 100%;
+    font-size: 36px;
   }
 }
 
@@ -997,14 +1048,14 @@ a {
           justify-content: center;
   padding-top: 58px;
   padding-bottom: 64px;
-  margin-bottom: -30px;
+  margin-bottom: -37px;
 }
 
 .special__item {
   width: 240px;
   text-align: left;
   margin-right: 46px;
-  margin-bottom: 30px;
+  margin-bottom: 37px;
 }
 
 .special__item:nth-child(4n), .special__item:last-child {
@@ -1050,5 +1101,39 @@ a {
   color: #22343D;
   margin: 0;
   opacity: 0.7;
+}
+
+@media only screen and (max-width: 1150px) {
+  .special__item:nth-child(2n), .special__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 729px) {
+  .special {
+    position: relative;
+  }
+  .special::after {
+    border-top-right-radius: 50% 40px;
+    border-top-left-radius: 50% 40px;
+  }
+  .special__container {
+    padding-bottom: 42px;
+  }
+  .special__title {
+    width: 100%;
+  }
+  .special__list {
+    padding-top: 50px;
+    padding-bottom: 37px;
+  }
+  .special__item {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 37px;
+  }
+  .special__item::before {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -21,22 +21,18 @@ body {
 }
 .night-day {
   background-color: $grey;
-  color: #fff;
-
+  color: $white !important;
   a {
-    color: #fff;
-  }
-  p {
-    color: #fff;
-  }
-  h3 {
-    color: #fff;
+    color: $white;
   }
   .special::after {
     opacity: 0.1;
   }
   button {
-    color: #fff;
+    color: $white;
+  }
+  .header__btn {
+    color: $grey;
   }
   .header {
     background-color: $grey;

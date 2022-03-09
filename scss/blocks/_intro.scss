@@ -3,11 +3,12 @@
   padding: 145px 20px 219px;
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     display: block;
     width: 600px;
     height: 556px;
+    margin:  0 auto;
     background: url("../img/intro-img.svg") no-repeat center;
     position: absolute;
     right: 0;
@@ -61,5 +62,38 @@
 @media only screen and (max-width: $tablet) {
   .intro__container {
     margin-top: 68px;
+    padding: 60px 20px 160px;
+    text-align: center;
+  
+    &::before {
+      position: static;
+    }
+  }
+  .intro__content {
+    display: inline-block;
+    padding-top: 30px;
+  }
+  .intro__title {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .intro__container {
+    margin-top: 66px;
+    padding: 30px 20px 116px;
+    text-align: center;
+  
+    &::before {
+      width: 338px;
+      height: 311px;
+      background: url("../img/intro-img-mobile.svg") no-repeat center;
+    }
+  }
+  .intro__content {
+    width: 100%
+  }
+  .intro__title {
+    width: 100%;
+    font-size: 36px;
   }
 }

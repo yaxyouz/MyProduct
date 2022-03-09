@@ -208,7 +208,7 @@
     right: 0; 
     width: 256px;
     height: calc(100vh - 66px);
-    padding-top: 64px;
+    padding-top: 40px;
     padding-left: 32px;
   }
   .header__nav--opened {
@@ -221,6 +221,7 @@
   .header__list {
     flex-direction: column;
     margin-right: 0;
+    margin-bottom: 15px;
   }
   .header__item {
     margin-right: 0;
@@ -232,5 +233,19 @@
   }
   .header__link {
     color: $white;
+  }
+  .header__btn-user {
+    display: none;
+  }
+  .header__content-btn {
+    width: auto;
+    display: block;
+    position: static;
+    transform: translateX(0);
+  }
+  .header__btn {
+    display: block;
+    margin-right: 0;
+    margin: 0 auto 15px;
   }
 }

@@ -83,6 +83,9 @@ body {
   .clients__content-descreption {
     color: #252B42;
   }
+  .cta__link {
+    color: $accent-color;
+  }
 }
 main {
   flex-grow: 1;

@@ -1,0 +1,126 @@
+.product__container {
+  padding-top: 169px; 
+}
+.product__list {
+  @include reset-list;
+}
+.product__item {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 150px;
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}
+.product__wrapper {
+  width: 486px;
+}
+.product__item-title {
+  font-weight: 600;
+  color: $grey;
+  margin: 0;
+}
+.product__item-descreption {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: $grey;
+  margin: 0;
+  padding-top: 8px;
+}
+.product__wrapper-title {
+  font-weight: 600;
+  color: $grey;
+  margin: 0;
+}
+.product__wrapper-descreption {
+  color: $grey;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 25px;
+  opacity: 0.7;
+}
+.product__wrapper-descreption-text {
+  padding-bottom: 0;
+}
+.product__item-text {
+  color: $grey;
+  margin: 0;
+  padding-top: 23px;
+  opacity: 0.7;
+  padding-bottom: 30px;
+}
+.product__wrapper-list {
+  @include reset-list;
+}
+.product__wrapper-item {
+  @include flex;
+  color: rgba(34, 52, 61, 0.7);
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 65px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url("../img/tick.svg") no-repeat center;
+    border-radius: 14px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.product__wrapper-item--orange::before {
+  background-color: #FF9900;
+}
+.product__wrapper-item--red::before {
+  background-color: $red;
+}
+.product__wrapper-item--blue::before {
+  background-color: $blue;
+}
+
+@media only screen and (max-width: $tablet) {
+  .product__container {
+    padding-top: 140px; 
+    text-align: left;
+  }
+  .product__item {
+    flex-direction: column-reverse;
+    padding-bottom: 150px;
+  
+    &:nth-child(2n) {
+      flex-direction: column-reverse;
+    }
+  }
+  .product__img {
+    width: 480px;
+    height: 410px;
+  }
+  .product__wrapper {
+    width: 100%;
+    padding-top: 50px;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .product__container {
+    padding-top: 95px; 
+  }
+  .product__item {
+    padding-bottom: 97px;
+  }
+  .product__img {
+    width: 390px;
+    height: 292px;
+  }
+}

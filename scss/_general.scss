@@ -22,6 +22,7 @@ body {
 .night-day {
   background-color: $grey;
   color: $white;
+
   a {
     color: $white;
   }
@@ -60,6 +61,18 @@ body {
   }
   .contents__content {
     padding-left: 24px;
+  }
+  .price__item-title,
+  .price__item-descreption,
+  .price__pages__item {
+    color: $grey;
+  }
+  .price__content-money,
+  .price__content-dollar {
+    color: $accent-color;
+  }
+  .price__content-month {
+    color: #E0E0E0;
   }
 }
 main {

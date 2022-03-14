@@ -470,6 +470,21 @@ body {
   padding-left: 24px;
 }
 
+.night-day .price__item-title,
+.night-day .price__item-descreption,
+.night-day .price__pages__item {
+  color: #22343D;
+}
+
+.night-day .price__content-money,
+.night-day .price__content-dollar {
+  color: #02897A;
+}
+
+.night-day .price__content-month {
+  color: #E0E0E0;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1683,6 +1698,201 @@ a {
   }
   .contents__content {
     padding: 24px 0 40px 0;
+  }
+}
+
+.price__container {
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+.price__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 51px;
+  color: #22343D;
+  margin: 0;
+}
+
+.price__descreption {
+  font-weight: 500;
+  color: #22343D;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 50px;
+}
+
+.price__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price__item {
+  width: 323px;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin-right: 70px;
+  padding: 24px 0 32px 0;
+  -webkit-transition: .2s ease all;
+  transition: .2s ease all;
+}
+
+.price__item:last-child {
+  margin-right: 0;
+}
+
+.price__item:hover {
+  background-color: #02897A;
+}
+
+.price__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  color: #22343D;
+  margin: 0;
+}
+
+.price__item-descreption {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #22343D;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.price__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price__content-money {
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #02897A;
+  margin: 0;
+}
+
+.price__content-per {
+  text-align: left;
+  padding-left: 8px;
+}
+
+.price__content-dollar {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  color: #02897A;
+  margin: 0;
+}
+
+.price__content-month {
+  line-height: 19px;
+  letter-spacing: 0.1px;
+  color: #E0E0E0;
+  margin: 0;
+  padding-top: 7px;
+}
+
+.price__pages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 38px;
+}
+
+.price__pages__item {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #22343D;
+  margin-bottom: 16px;
+}
+
+.price__pages__item:last-child {
+  margin-bottom: 0;
+}
+
+.price__link {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  display: inline-block;
+  color: #fff;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background-color: #02897A;
+}
+
+.price__item:hover .price__item-title,
+.price__item:hover .price__item-descreption,
+.price__item:hover .price__content-money,
+.price__item:hover .price__content-dollar,
+.price__item:hover .price__pages__item {
+  color: #fff;
+}
+
+.price__item:hover .price__link {
+  color: #02897A;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 1150px) {
+  .price__container {
+    padding-bottom: 120px;
+  }
+  .price__item {
+    margin-right: 0;
+    margin-right: 40px;
+    margin-bottom: 32px;
+  }
+  .price__item:nth-child(2n), .price__item:last-child {
+    margin-right: 0;
+  }
+  .price__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 729px) {
+  .price__container {
+    padding-bottom: 100px;
+  }
+  .price__item {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

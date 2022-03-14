@@ -1504,6 +1504,7 @@ a {
     padding-bottom: 50px;
   }
   .process__item-title {
+    width: 248px;
     padding: 10px 30px;
     line-height: 24px;
   }

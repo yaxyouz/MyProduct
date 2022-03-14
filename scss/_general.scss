@@ -31,7 +31,8 @@ body {
   h3, h2,li {
     color: $white;
   }
-  .special::after {
+  .special::after,
+  .process::before {
     opacity: 0.1;
   }
   button {

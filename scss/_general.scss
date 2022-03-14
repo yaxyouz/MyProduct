@@ -74,6 +74,15 @@ body {
   .price__content-month {
     color: #E0E0E0;
   }
+  .clients__item-title {
+    color: #737373;
+  }
+  .clients__content-title {
+    color: $accent-color;
+  }
+  .clients__content-descreption {
+    color: #252B42;
+  }
 }
 main {
   flex-grow: 1;

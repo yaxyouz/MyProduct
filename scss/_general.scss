@@ -35,6 +35,9 @@ body {
   .process::before {
     opacity: 0.1;
   }
+  .contents__item p  {
+    color: $grey;
+  }
   button {
     color: $white;
   }
@@ -54,6 +57,9 @@ body {
     &__burger::after {
       background-color: $white;
     }
+  }
+  .contents__content {
+    padding-left: 24px;
   }
 }
 main {

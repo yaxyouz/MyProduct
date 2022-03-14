@@ -1,0 +1,128 @@
+.contents__container {
+  padding-bottom: 150px;
+}
+.contents__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 51px;
+  color: $grey;
+  margin: 0;
+}
+.contents__descreption {
+  font-weight: 500;
+  line-height: 26px;
+  color: $grey;
+  opacity: 0.8;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 33px;
+}
+.contents__list {
+  @include flex;
+  justify-content: center;
+  @include reset-list;
+  padding-bottom: 64px;
+}
+.contents__item {
+  width: 348px;
+  background-color: #fff;
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+  margin-right: 32px;
+  transition: .2s ease all;
+
+  &:hover .contents__content-descreption{
+    color: $accent-color;
+  }
+
+  &:nth-child(3n),
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.contents__img {
+  border-radius: 8px 8px 0px 0px;
+  display: block;
+  width: 100%;
+}
+.contents__content {
+  padding: 24px 0 40px 24px;
+}
+.contents__content-title {
+  color: $grey;
+  line-height: 28px;
+  margin: 0;
+}
+.contents__content-span {
+  font-weight: 700;
+  color: $grey;
+  padding-right: 5px;
+  border-right: 1px solid $grey;
+}
+.contents__content-descreption {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  color: #22343D;
+  margin: 0;
+  padding-top: 12px;
+}
+.contents__btn-list {
+  @include flex;
+  @include reset-list;
+  align-items: center;
+  justify-content: center;
+}
+.contents__btn-item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.contents__btn-button {
+  @include btn;
+  width: 16px;
+  height: 16px;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+}
+.contents__btn-button-active { 
+  background-color: $accent-color;
+}
+@media only screen and (max-width: $tablet) {
+  .contents__container {
+    padding-bottom: 120px;
+    text-align: center;
+  }
+  .contents__list {
+    padding-bottom: 0;
+  }
+  .contents__item {
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 30px;
+
+   &:last-child {
+     margin-bottom: 0;
+   }
+  }
+  .contents__btn-list {
+    display: none;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .contents__container {
+    padding-bottom: 100px;
+  }
+  .contents__descreption {
+    padding-bottom: 40px;
+  }
+  .contents__item {
+    margin-bottom: 16px;
+    border: none;
+  }
+  .contents__content {
+    padding: 24px 0 40px 0;
+  }
+}

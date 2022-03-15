@@ -501,6 +501,10 @@ body {
   color: #02897A;
 }
 
+.night-day .footer__link {
+  color: #02897A;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

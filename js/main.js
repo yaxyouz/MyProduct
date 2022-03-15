@@ -33,3 +33,15 @@ burgerToggler.addEventListener("click", function() {
       navigation.classList.remove("header__nav--closing");
     }
   });
+
+
+  const buttonOpen = document.querySelectorAll(".question__item-btn");
+
+  if(buttonOpen.length > 0) {
+    buttonOpen.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.nextElementSibling.classList.toggle('question__item-descreption-open');
+            btn.classList.toggle('question__item-btn-minus');
+        })
+    })
+}

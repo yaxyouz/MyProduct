@@ -1,0 +1,110 @@
+.effect__container {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+.effect__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 51px;
+  color: $grey;
+  margin: 0;
+}
+.effect__wrapper {
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 56px;
+}
+.effect__list {
+  @include reset-list;
+  width: 543px;
+  text-align: left;
+}
+.effect__item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.effect__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: $grey;
+  margin: 0;
+  padding-left: 64px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.effect__item-title--enterpreneur::before {
+  background: #F4F5F7 url("../img/enterpreneur.svg") no-repeat center;
+}
+.effect__item-title--accountants::before {
+  background: #F4F5F7 url("../img/accountants.svg") no-repeat center;
+}
+.effect__item-title--universities::before {
+  background: #F4F5F7 url("../img/universities.svg") no-repeat center;
+}
+.effect__item-descreption {
+  line-height: 28px;
+  color: $grey;
+  margin: 0;
+  padding-top: 23px;
+}
+
+@media only screen and (max-width: $tablet) {
+  .effect__container {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .effect__wrapper {
+    padding-top: 70px;
+    flex-direction: column;
+  }
+  .effect__list {
+    padding-top: 50px;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .effect__container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .effect__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .effect__wrapper {
+    padding-top: 33px;
+  }
+  .effect__list {
+    width: 100%;
+    padding-top: 32px;
+  }
+  .effect__item {
+    margin-bottom: 24px;
+  }
+  .effect__item-descreption {
+    padding-top: 16px;
+  }
+
+
+
+  .effect__img {
+    width: 352px;
+    height: 288px;
+  }
+}

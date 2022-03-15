@@ -33,7 +33,8 @@ body {
     color: $white;
   }
   .special::after,
-  .process::before {
+  .process::before,
+  .enterprise::before {
     opacity: 0.1;
   }
   .contents__item p  {

@@ -1726,6 +1726,20 @@ a {
   text-align: center;
 }
 
+.price__container--pricing {
+  padding-top: 50px;
+  margin-top: 80px;
+}
+
+.price__title-pricing {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #22343D;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
 .price__title {
   font-weight: 700;
   font-size: 34px;
@@ -1740,6 +1754,10 @@ a {
   margin: 0;
   padding-top: 8px;
   padding-bottom: 50px;
+}
+
+.price__descreption--pricing {
+  padding-top: 16px;
 }
 
 .price__list {

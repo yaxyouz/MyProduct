@@ -120,17 +120,26 @@
   font-weight: 600;
   line-height: 24px;
   color: #173A56;
-  background-color: #fff;
   border: 1px solid #BCD0E5;
   border-radius: 4px;
   padding: 9px 23px;
   margin-right: 24px;
-  transition: .3s ease all;
+  transition: .2s ease all;
 
   &:hover {
     background-color: $accent-color;
     border: 1px solid $accent-color;
     color: $white;
+  }
+}
+.header__btn--up {
+  background-color: $accent-color;
+  color: $white;
+
+  &:hover {
+    background-color: transparent;
+    color: #173A56;
+    border-color: #BCD0E5; 
   }
 }
 .header__btn-toggle {
@@ -145,9 +154,6 @@
   }
 }
 @media only screen and (max-width: $tablet) {
-  .header__nav {
-    margin-right: 20px;
-  }
   .header__item {
     margin-right: 25px;
   }
@@ -171,11 +177,12 @@
     display: block;
     margin-right: 20px;
   }
+  .header__btn {
+    background-color: transparent;
+  }
   .header__btn--up {
     margin-right: 0;
-  }
-  .header__btn {
-    background-color: #fff;
+    background-color: $accent-color;
   }
 }
 @media only screen and (max-width: $mobile) {
@@ -241,5 +248,12 @@
     display: block;
     margin-right: 0;
     margin: 0 auto 15px;
+    color: $white;
+  }
+  .header__btn--up {
+    border-color: transparent;
+    &:hover {
+      color: $white;
+    }
   }
 }

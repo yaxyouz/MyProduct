@@ -23,13 +23,7 @@ body {
   background-color: $grey;
   color: $white;
 
-  a {
-    color: $white;
-  }
-  p {
-    color: $white;
-  }
-  h3, h2,li {
+  h3, h2,li,p,a {
     color: $white;
   }
   .special::after,
@@ -44,8 +38,17 @@ body {
     color: $white;
   }
   .header__btn {
-    background-color: $white;
-    color: $grey;
+    background-color: transparent;
+  }
+  .header__btn--up {
+    background-color: $accent-color;
+    color: $white;
+    border-color: $accent-color;
+
+    &:hover {
+      border-color: #BCD0E5;
+      color: $white;
+    }
   }
   .header {
     background-color: $grey;

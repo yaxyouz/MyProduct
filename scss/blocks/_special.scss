@@ -94,13 +94,9 @@
   }
 }
 @media only screen and (max-width: $mobile) {
-  .special {
-    position: relative;
-  
-    &::after {
-      border-top-right-radius: 50% 40px;
-      border-top-left-radius: 50% 40px;
-    }
+  .special::after {
+    border-top-right-radius: 50% 40px;
+    border-top-left-radius: 50% 40px;
   }
   .special__container {
     padding-bottom: 42px;

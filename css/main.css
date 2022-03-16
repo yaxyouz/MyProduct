@@ -508,6 +508,10 @@ body {
   color: #02897A;
 }
 
+.night-day .get-link:hover {
+  color: #fff;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -604,7 +608,7 @@ a {
   position: fixed;
   top: 0;
   background-color: #fff;
-  z-index: 5;
+  z-index: 10;
 }
 
 .header__container {
@@ -959,7 +963,8 @@ a {
   display: inline-block;
   font-weight: 700;
   line-height: 24px;
-  color: #02897A;
+  background-color: #02897A;
+  color: #fff;
   padding: 15px 38px;
   border-radius: 4px;
   border: 3px solid #02897A;
@@ -968,8 +973,8 @@ a {
 }
 
 .get-link:hover {
-  color: #fff;
-  background-color: #02897A;
+  color: #02897A;
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 729px) {

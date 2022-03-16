@@ -93,6 +93,9 @@ body {
   .footer__link {
     color: $accent-color;
   }
+  .get-link:hover {
+    color: $white;
+  }
 }
 main {
   flex-grow: 1;
